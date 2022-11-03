@@ -1,0 +1,64 @@
+{
+  "reclamation": [
+    {
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "missionDesc": "mal fait"
+    },
+    {
+      "nRec": 2,
+      "nom": "abessi",
+      "prenom": "hela",
+      "email": "abessi.hela@esprit.tn",
+      "tel": 20457222,
+      "mission": "jardinage",
+      "datemission": "20/09/2022",
+      "nomPrestataire": "khaled",
+      "missionDesc": "mal fait"
+    }
+  ],
+  "reponse": [
+    {
+      "nRep": 1,
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "reponseRec": "En cours de traitement"
+    },
+    {
+      "nRep": 2,
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "reponseRec": "Reclamation acceptée"
+    },
+    {
+      "nRep": 3,
+      "nRec": 2,
+      "nom": "abessi",
+      "prenom": "hela",
+      "email": "abessi.hela@esprit.tn",
+      "tel": 20457222,
+      "mission": "jardinage",
+      "datemission": "20/09/2022",
+      "nomPrestataire": "khaled",
+      "reponseRec": "En cours de traitement"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+<div class="contact_section layout_padding">
+  <div class="custom_heading-container">
+    <figure align="center">
+      <blockquote class="blockquote">
+        <p > Un accident s'est produit lors de votre prestation occasionnant des dommages matériels ou corporels ? Faites-nous en part au plus vite en utilisant notre formulaire de déclaration de sinistre en ligne afin de rétablir la situation au plus vite.
+        </p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        vous pouvez contacter directement<cite title="Source Title"> le service client</cite>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="container layout_padding2-top">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+      <h4 align="center">Passer une reclamation</h4>
+        <form action="">
+          <div>
+            <input type="text" placeholder="Nom" name="nom" [(ngModel)]="reclamation.nom"  required #nom="ngModel" minlength="3">
+          </div>
+          <div
+           *ngIf="nom.touched && nom.invalid"
+          class="alert alert-danger" role="alert">
+            <div *ngIf="nom?.errors?.['minlength']"> champ nom doit avoir au moins 3 caracteres </div>
+            <div *ngIf="nom?.errors?.['required']">champ nom obligatoire </div>
+          </div>
+        <div>
+            <input type="text" placeholder="Prenom" name="prenom" [(ngModel)]="reclamation.prenom"  required #prenom="ngModel" minlength="3">
+          </div>
+          <div
+           *ngIf="prenom.touched && prenom.invalid"
+          class="alert alert-danger" role="alert">
+            <div *ngIf="prenom?.errors?.['minlength']"> champ prenom doit avoir au moins 3 caracteres </div>
+            <div *ngIf="prenom?.errors?.['required']">champ prenom obligatoire ! </div>
+          </div>
+            <div>
+            <input type="email" placeholder="EMAIL" name="email" [(ngModel)]="reclamation.email"  required #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+          </div>
+          <div
+           *ngIf="email.touched && email.invalid"
+          class="alert alert-danger" role="alert">
+            <div *ngIf="email?.errors?.['pattern']">Email invalide </div>
+            <div *ngIf="email?.errors?.['required']">champ Email obligatoire </div>
+          </div>
+            <div>
+            <input type="number" placeholder="Numéro de téléphone" name="tel" [(ngModel)]="reclamation.tel"  required #tel="ngModel" pattern=""[0-9]{2}[ -][0-9]{3}[ -][0-9]{3}>
+          </div>
+          <div
+           *ngIf="tel.touched && tel.invalid"
+          class="alert alert-danger" role="alert">
+            <div *ngIf="tel?.errors?.['pattern']"> champ téléphone doit contenir 8 chiffres  </div>
+            <div *ngIf="tel?.errors?.['required']">champ téléphone obligatoire ! </div>
+          </div>
+           <div>
+            <select name="typeservice" id=""  [(ngModel)]="reclamation.mission" required>
+              <option value="" disabled selected>TYPE De SERVICE</option>
+              <option value="">Service 1</option>
+              <option value="">Service 2</option>
+              <option value="">Service 3</option>
+            </select>
+          </div>
+            <div>
+            <input type="date" placeholder="Date Mission" name="datemission"
+            value="2022-11-03"
+            min="2020-01-01" max="2025-12-31"
+            [(ngModel)]="reclamation.datemission"  required  #datemission="ngModel">
+          </div>
+          <div
+          *ngIf="datemission.touched && datemission.invalid"
+         class="alert alert-danger" role="alert">
+         <div *ngIf="datemission?.errors?.['required']">champ date mission obligatoire ! </div>
+         </div>
+        <div>
+            <select name="nomPrestataire" id="" [(ngModel)]="reclamation.nomPrestataire">
+              <option value="" disabled selected>Nom prestataire</option>
+              <option value="">Service 1</option>
+              <option value="">Service 2</option>
+              <option value="">Service 3</option>
+            </select>
+          </div>
+            <div>
+            <input type="text" class="message-box" placeholder="MESSAGE" name="missionDesc" [(ngModel)]="reclamation.missionDesc"  required #missionDesc="ngModel">
+          </div>
+          <div
+           *ngIf="missionDesc.touched && missionDesc.invalid"
+          class="alert alert-danger" role="alert">
+            Champ obligatoire 
+          </div>
+            <div class="d-flex justify-content-center ">
+            <button>
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+</div>
