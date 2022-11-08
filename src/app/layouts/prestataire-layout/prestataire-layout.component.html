@@ -1,0 +1,99 @@
+<header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="">
+          <span>
+            RapidService
+          </span>
+        </a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                 <a class="nav-link" routerLink="/prestataire/accueils">Accueil </a>
+               </li>
+               <li class="nav-item active">
+                 <a class="nav-link" routerLink="/prestataire/service"> Mes Services</a>
+               </li>
+               <li class="nav-item active">
+                <a class="nav-link" routerLink="/prestataire/demande">  Demandes</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/prestataire/listclient">  Liste des clients</a>
+              </li>
+              
+               
+             </ul>
+          </div>
+        </div>
+        <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+          <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+        </form>
+        <!--User-->
+        <ul>
+          <li class="nav-item navbar-dropdown dropdown-user dropdown">
+            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+              <div class="avatar avatar-online">
+                <img src="../assets/back/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <div class="d-flex">
+                    <div class="flex-shrink-0 me-3">
+                      <div class="avatar avatar-online">
+                        <img src="../assets/back/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <span class="fw-semibold d-block">Mejri Chaima</span>
+                      <small class="text-muted">prestataire</small>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <div class="dropdown-divider"></div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="bx bx-user me-2"></i>
+                  <span class="align-middle" routerLink="">Mon Profile</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="bx bx-bell-plus"></i>
+                  <span class="align-middle"> Notifications</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <i class="bx bx-cog me-2"></i>
+                  <span class="align-middle">Settings</span>
+                </a>
+              </li>
+             
+              <li>
+                <div class="dropdown-divider"></div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="auth-login-basic.html">
+                  <i class="bx bx-power-off me-2"></i>
+                  <span class="align-middle">Déconnexion</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <router-outlet></router-outlet>

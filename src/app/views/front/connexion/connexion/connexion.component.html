@@ -1,0 +1,47 @@
+<section class="contact_section layout_padding">
+    <div class="custom_heading-container">
+      <h3 class=" ">
+        RapidService
+      </h3>
+    </div>
+    <div class="container layout_padding2-top">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form name="form" #f="ngForm">
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input name="email" ngModel email class="form-control" #email="ngModel" />
+          
+              <div *ngIf="(!email.valid && email.touched) || (!email.value && email.touched)"
+              class="alert alert-warning my-3" role="alert">
+                merci d'entrer un email valid
+              </div>
+            </div>
+            
+
+
+
+
+            <div class="mb-3">
+              <label for="exampleInputCin1" class="form-label">Password</label>
+              <input type="text" name="Password" ngModel class="form-control" #Password="ngModel" />
+              
+              <div *ngIf="Password.touched && Password.value?.length !== 8"
+              class="alert alert-warning my-3" role="alert">
+                merci d'entrer une Password valid
+              </div>
+            </div>
+           
+            
+            
+            <div class="d-flex justify-content-center ">
+              <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+

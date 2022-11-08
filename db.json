@@ -1,0 +1,182 @@
+{
+  "reclamation": [
+    {
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "missionDesc": "mal fait"
+    },
+    {
+      "nRec": 2,
+      "nom": "abessi",
+      "prenom": "hela",
+      "email": "abessi.hela@esprit.tn",
+      "tel": 20457222,
+      "mission": "jardinage",
+      "datemission": "20/09/2022",
+      "nomPrestataire": "khaled",
+      "missionDesc": "mal fait"
+    }
+  ],
+  "reponse": [
+    {
+      "nRep": 1,
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "reponseRec": "En cours de traitement"
+    },
+    {
+      "nRep": 2,
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "reponseRec": "Reclamation acceptée"
+    },
+    {
+      "nRep": 3,
+      "nRec": 2,
+      "nom": "abessi",
+      "prenom": "hela",
+      "email": "abessi.hela@esprit.tn",
+      "tel": 20457222,
+      "mission": "jardinage",
+      "datemission": "20/09/2022",
+      "nomPrestataire": "khaled",
+      "reponseRec": "En cours de traitement"
+    }
+  ],
+  "demandeP": [
+    {
+      "nDemande": 1,
+      "nomService": "bricolage",
+      "typeService": "amenagement",
+      "nomPrestataire": "Mohamed abessi",
+      "Status": "En cours"
+    },
+    {
+      "nDemande": 2,
+      "nomService": "bricolage",
+      "typeService": "amenagement",
+      "nomPrestataire": "Mohamed abessi",
+      "Status": "En attente"
+    }
+  ],
+  "demandeC": [
+    {
+      "id": 1,
+      "mailC": "haifa.mekni@esprit.tn",
+      "nomService": "jardinage",
+      "passwordC": "hayfa123++",
+      "typeService": "Déserbage",
+      "nomPrestataire": "one"
+    },
+    {
+      "id": 4,
+      "mailC": "haifa.mekni@esprit.tn",
+      "nomService": "Enfants",
+      "passwordC": "hayfaaaaaaaa",
+      "typeService": "garde d'enfants",
+      "nomPrestataire": "two"
+    },
+    {
+      "id": 6,
+      "mailC": "chayma.mekni@esprit.tn",
+      "nomService": "Enfants",
+      "passwordC": "chayma123++",
+      "typeService": "garde d'enfants",
+      "nomPrestataire": "two"
+    },
+    {
+      "id": 3,
+      "mailC": "ahmed@yahoo.fr",
+      "nomService": "Enfants",
+      "passwordC": "ahmed123",
+      "nomPrestataire": "two",
+      "typeService": "Déserbage"
+    },
+    {
+      "id": 10,
+      "mailC": "med",
+      "passwordC": "med1",
+      "nomService": "brcolage",
+      "typeService": "aménagements",
+      "nomPrestataire": "two"
+    },
+    {
+      "id": 12,
+      "mailC": "nour@yahoo.fr",
+      "passwordC": "nour123",
+      "nomService": "Enfants",
+      "typeService": "",
+      "nomPrestataire": "user"
+    },
+    {
+      "id": 13,
+      "mailC": "sara@yahoo.com",
+      "passwordC": "sara++",
+      "nomService": "Jardinage",
+      "typeService": "Tondre la pelouse",
+      "nomPrestataire": "ahmed"
+    },
+    {
+      "id": 5,
+      "mailC": "azza",
+      "passwordC": "azza123",
+      "nomService": "Bricolage",
+      "typeService": "Aménagement",
+      "nomPrestataire": "saber"
+    }
+  ],
+  "prestataire": [
+    {
+      "id_Prestataire": 1,
+      "nom": "Samir jabri",
+      "prenom": "bricolage",
+      "ville": "string",
+      "tel": "string",
+      "mail": "string",
+      "password": "string",
+      "experience": "string",
+      "nomService": "string",
+      "typeService ": "string"
+    },
+    {
+      "id_Prestataire": 1,
+      "nom": "Bouhleli",
+      "prenom": "Ichrak",
+      "ville": "Béja",
+      "tel": "21345934",
+      "mail": "gharbisamir@gmail.com",
+      "password": "112233",
+      "experience": "experience de 2 ans",
+      "nomService": "Bricolage",
+      "typeService ": "Electricité"
+    }
+  ],
+  "client":[
+    {
+      "id": 1, 
+      "nom": "Bouhleli",
+      "prenom": "ahmed",
+      "photosprofil" :"https://sm.askmen.com/t/askmen_in/article/f/facebook-p/facebook-profile-picture-affects-chances-of-gettin_fr3n.1200.jpg",
+      "tel":"22222222",
+       "mail":"ahmed@gmal.com"
+    }
+  ]
+}
