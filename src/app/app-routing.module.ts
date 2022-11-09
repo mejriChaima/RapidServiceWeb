@@ -1,3 +1,4 @@
+import { MonprofilComponent } from './views/prestataire/monprofil/monprofil/monprofil.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path: 'demandeservice',loadChildren:()=>import('./views/user/demandeservice/demandeservice.module').then(m=>m.DemandeserviceModule)},
     {path: 'reclamation',loadChildren:()=>import('./views/user/reclamation/reclamation.module').then(m=>m.ReclamationModule)}
 
+
     
   ]},
 {path:'prestataire',component: PrestataireLayoutComponent,
@@ -41,7 +43,9 @@ children:[
  {path:'accueils',loadChildren:()=>import('./views/prestataire/accueils/accueils.module').then(m=>m.AccueilsModule)},
  {path:'service',loadChildren:()=>import('./views/prestataire/service/service.module').then(m=>m.ServiceModule)},
  {path:'demande',loadChildren:()=>import('./views/prestataire/demande/demande.module').then(m=>m.DemandeModule)},
- {path:'listclient',loadChildren:()=>import('./views/prestataire/listclient/listclient.module').then(m=>m.ListclientModule)}
+ {path:'listclient',loadChildren:()=>import('./views/prestataire/listclient/listclient.module').then(m=>m.ListclientModule)},
+ {path:'monprofil',loadChildren:()=>import('./views/prestataire/monprofil/monprofil.module').then(m=>m.MonprofilModule)}
+
 
 ]}
 ];
