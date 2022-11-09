@@ -2,17 +2,13 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table reclamation </span></h4>
     <div class="card">
-    <h5 class="card-header">Liste reclamations</h5>
+    <h5 class="card-header">Mes reclamations</h5>
     <div class="table-responsive text-nowrap">
       <div class="table-responsive">
       <table class="table">
         <thead>
           <tr>
-            <th>N Rec</th>
-            <th>Nom</th>
-            <th>Prenom</th>
-            <th>E-mail</th>
-            <th>Tel</th>
+            
             <th>Mission</th>
             <th>Date&nbsp;mission</th>
             <th>Nom&nbsp;prestataire</th>
@@ -22,12 +18,8 @@
            </tr>
         </thead>
         <tbody class="table-border-bottom-0">
-          <tr *ngFor="let r of ListReclamation">
-            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{r.nRec}}</strong></td>
-            <td>{{r.nom}}</td>
-            <td>{{r.prenom}}</td>
-            <td><span class="badge bg-label-primary me-1">{{r.email}}</span></td>
-            <td>{{r.tel}}</td>
+          <tr *ngFor="let r of listReclamationcCoteUser">
+           
             <td>{{r.mission}}</td>
             <td>{{r.datemission}}</td>
             <td>{{r.nomPrestataire}}</td>
@@ -50,7 +42,7 @@
               </div>
               -->
               <div class="btn-group btn-group-sm" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-success">Repondre</button>
+                <button type="button" class="btn btn-success">Modifier</button>
                 <button type="button" class="btn btn-danger">Supprimer</button>
               </div>
 
@@ -63,6 +55,7 @@
     </div>
     </div>
 </div>
+
 
 
 

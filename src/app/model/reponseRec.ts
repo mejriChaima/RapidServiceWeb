@@ -10,6 +10,7 @@ export class reponseRec{
     datemission!:Date;
     nomPrestataire!:string;
     reponseRec!:string;
+    status!:string;
 
    
 }

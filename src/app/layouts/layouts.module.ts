@@ -5,6 +5,7 @@ import { UserLayoutComponent } from './user-layout/user-layout.component';
 import { FrontLayoutComponent } from './front-layout/front-layout.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AuthAdminComponent } from './auth-admin/auth-admin.component';
 
 
 
@@ -12,7 +13,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AdminLayoutComponent,
     UserLayoutComponent,
-    FrontLayoutComponent
+    FrontLayoutComponent,
+    AuthAdminComponent
   ],
   imports: [
     CommonModule,

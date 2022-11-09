@@ -17,11 +17,17 @@ export class ReclamationService {
     'Content-Type': 'application/json'
     })
     }
-  constructor(private http : HttpClient) { }
+  constructor(private http : HttpClient) {
+    
+   }
 
   getReclamation():Observable<reclamation[]>{
     return this.http.get<reclamation[]>(this.reclamationUrl);
   }
+
+
+
+  
   deleteReclamation(nRec:any): Observable<any>{
     return this.http.delete<any>(this.reclamationUrl+'/'+nRec);
     alert("Vous avez supprimer une reclamation");
@@ -29,5 +35,18 @@ export class ReclamationService {
   geReclamationById(nRec:any):Observable<reclamation>{
       return this.http.get<reclamation>(this.reclamationUrl+'/'+nRec);
   }
+/*
+  addReclamation (reclamation: reclamation): Observable<reclamation> {
+    
+    return this.http.post<reclamation>(this.reclamationUrl, reclamation,
+    this.httpOptions);} */
+    
+    postReclamation(r:reclamation){
+      return this.http.post(this.reclamationUrl,r);
+    }
+
+
 
 }
+
+

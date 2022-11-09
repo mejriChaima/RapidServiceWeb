@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CalculService } from 'src/app/controller/calcul.service';
 import { ReclamationService } from 'src/app/controller/reclamation.service';
 import { reclamation } from 'src/app/model/reclamation';
 
@@ -8,8 +9,9 @@ import { reclamation } from 'src/app/model/reclamation';
   styleUrls: ['./reclamation.component.css']
 })
 export class ReclamationComponent implements OnInit {
+  count !:number;
   ListReclamation!: reclamation[];
-  constructor(private reclamationservice:ReclamationService) { }
+  constructor(private reclamationservice:ReclamationService ,private calculservice:CalculService) { }
 
   ngOnInit(): void {
     this.reclamationservice.getReclamation().subscribe(
@@ -22,5 +24,9 @@ export class ReclamationComponent implements OnInit {
     this.reclamationservice.deleteReclamation(reclamation.nRec).subscribe(res=>console.log("suppression de reclamation réussites"));
     
   }
-
+  
+ 
+  getNbrReclamationByNameClient(){
+    this.count =this.calculservice.getNumberOf(this.ListReclamation,'nom','mejri')
+  }
 }
