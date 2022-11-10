@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DemandeserviceComponent } from '../demandeservice/demandeservice/demandeservice.component';
-import { DemandesComponent } from './demandes/demandes.component';
+import { MesdemandesComponent } from './mesdemandes/mesdemandes.component';
+import { PasserdemandeComponent } from './passerdemande/passerdemande.component';
 
 const routes: Routes = [
-  {path:'',component:DemandesComponent},
-  {path:'user/demandes',component:DemandesComponent},
-  {path:'update/:id', component: DemandeserviceComponent }
+  {path:'mesdemandes',component:MesdemandesComponent},
+  {path:'passerdemande',component:PasserdemandeComponent}
+
+
+
 ];
 
 @NgModule({

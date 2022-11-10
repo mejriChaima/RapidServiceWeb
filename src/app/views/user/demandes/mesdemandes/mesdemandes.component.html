@@ -16,12 +16,7 @@
           <div class="col-md-6 mx-auto">
             
 
-           
-            
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <table class="table">
+                  <table class="table">
                 <thead>
                   <tr>
 
@@ -41,7 +36,7 @@
                     <td>{{d.typeService}}</td>
                     <td>{{d.nomPrestataire}}</td>
                      <td><button type="button" class="btn btn-danger" (click)="Supprimer(d)">Supprimer</button></td>
-                    <a [routerLink]="['/update',d.id]">
+                    <a routerLink="user/demandes/passerdemande">
                       update
                      </a>
              </tr>

@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MesreclamationComponent } from './mesreclamation/mesreclamation.component';
 import { ReclamationComponent } from './reclamation/reclamation.component';
 
 const routes: Routes = [
-  {path:'',component:ReclamationComponent}
+  {path:'',component:ReclamationComponent},
+  {path:'mesrec',component:MesreclamationComponent}
+
   
 ];
 

@@ -3,7 +3,7 @@ export class prestataire{
     
     id_Prestataire!: number;
     nom!: number;
-    prenom!: string;
+    prenom!: number;
     ville!: string;
     tel!:string;
     mail!:string;
@@ -11,6 +11,7 @@ export class prestataire{
     experience!:string;
     nomService!:string;
     typeService !: string;
+    pictureprofils ! : string;
 
    
 }

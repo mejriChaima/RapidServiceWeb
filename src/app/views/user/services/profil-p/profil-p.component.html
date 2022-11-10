@@ -1,0 +1,160 @@
+
+
+<body>
+    <div class="container main-secction">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 image-section">
+                <img src="">
+            </div>
+            <div class="row user-left-part">
+                <div class="col-md-3 col-sm-3 col-xs-12 user-profil-part pull-left">
+                    <div class="row ">
+                        <div class="col-md-12 col-md-12-sm-12 col-xs-12 user-image text-center">
+                            <img src="https://i.imgur.com/bDLhJiP.jpg" class="rounded-circle">
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
+                            <button class="btn btn-success" onclick="alert('Hello\ demande envoyer avec succes')" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Envoyer demande</button> 
+                        </div>
+                     
+                          <form #f="ngForm">
+                          
+                        <div class="form-group">
+                            <label>Avis</label>
+                            
+                            <select required class="form-control"name="typeAvis" 
+                            [(ngModel)]="avis.typeAvis"  #avis_typeAvis="ngModel">
+                          
+                            <option value="Excelent">Excelent</option>
+                            <option value="Très bien">Très bien</option>
+                            <option value="Bien">Bien</option>
+                            <option value="Médiocre">Médiocre</option>
+                            </select>
+                          </div>
+                      
+                            <br>
+                            <span>20</span><button class="btn btn-success" (click)="save()" [disabled]="f.invalid">
+                              save
+                            </button>
+                          
+                          </form>
+
+
+
+
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12 pull-right profile-right-section">
+                    <div class="row profile-right-section-row">
+                        <div class="col-md-12 profile-header">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
+                                    <h1>jabri Samir</h1>
+                                    <h5>Developer</h5>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-8">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                                <li class="nav-item">
+                                                  <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i class="fas fa-user-circle"></i> Profil Profesionnel</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                  <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i class="fas fa-info-circle"></i> Informacion Detaillé</a>
+                                                </li>                                                
+                                              </ul>
+                                              
+                                              <!-- Tab panes -->
+                                              <div class="tab-content" classe="mod">
+                                                <div role="tabpanel" class="tab-pane fade show active" id="profile">
+                                                        <div class="row">
+                                                                <div class="col-md-2">
+                                                                    <label >ID</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p>1</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-2">
+                                                                    <label>Age</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p>36 ans</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-2">
+                                                                    <label>Email</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p>jabriSamir@gmail.com</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-2">
+                                                                    <label>Telé</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p>97111111</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-2">
+                                                                    <label>Profesion</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p>Developer</p>
+                                                                </div>
+                                                            </div>
+                                                </div>
+
+
+
+
+                                                <div role="tabpanel" class="tab-pane fade" id="buzz">
+                                                        <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <label>Experience</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <p>experience de 3 ans</p>
+                                                                    <p>Développeur full stack certifié Scrum, avec plus de 2 ans d’expérience. Mordu d’informatique, j’ai appris à coder dès mon plus jeune âge dans divers langages informatiques (Javascript, PHP, AngularJS…) et ai créé des projets personnels, dont un site référençant les vidéos les plus vues sur la plateforme Twitch (+ 5000 visites/mois). Polyvalent, je maîtrise les différentes étapes techniques de la création d’un site ou d’une application web ; de la compréhension des besoins utilisateurs, au développement frontend et backend en passant par la maintenance.</p>
+                                                                </div>
+                                                            </div>
+                                                           
+                                                           
+                                                           
+                                                           
+                                                            </div>
+                                                           
+                                                </div>
+                                                
+                                              </div>
+                          
+                                </div>
+                                <div class="col-md-4 img-main-rightPart">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row image-right-part">
+                                                <div class="col-md-6 pull-left image-right-detail">
+                                                    <h6>PUBLICATIONS</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-12 image-right-detail-section2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+    

@@ -2,14 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DemandesRoutingModule } from './demandes-routing.module';
-import { DemandesComponent } from './demandes/demandes.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MesdemandesComponent } from './mesdemandes/mesdemandes.component';
+import { PasserdemandeComponent } from './passerdemande/passerdemande.component';
 
 
 @NgModule({
   declarations: [
-    DemandesComponent
+
+    MesdemandesComponent,
+    PasserdemandeComponent
   ],
   imports: [
     CommonModule,

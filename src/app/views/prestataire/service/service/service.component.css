@@ -1,0 +1,35 @@
+label{
+    font-size: 30px;
+}
+h3{
+    font-size: 50px;
+}
+
+table{
+    width: 50%;
+    margin-left: 20%;
+}
+
+#btn1{
+    width: 150px;
+    height: 60px;
+    font-size: 30px;
+
+}
+th{
+    font-size: 30px;
+}
+td{
+    font-size: 25px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+select{
+    width: 30%;
+    height: 40px;
+    border-color: red;
+    border-radius:7px ;
+    border-width: 3px;
+}

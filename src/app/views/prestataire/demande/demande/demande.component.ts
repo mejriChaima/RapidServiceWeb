@@ -10,6 +10,7 @@ import { DemandeService } from 'src/app/controller/demande.service';
 })
 export class DemandeComponent implements OnInit {
   demandesList !: demandes []; 
+  demandes !:  demandes;
   constructor(private demandeservice:DemandeService) { }
 
   ngOnInit(): void {
@@ -29,8 +30,11 @@ export class DemandeComponent implements OnInit {
   
 
   Accepter(demandes :demandes) {
-    
+      this.demandeservice.addDemande(this.demandes).subscribe(
+      ()=> this.demandesList= [this.demandes, ...this.demandesList]
+      );
+      }
   
   }
 
-}
+

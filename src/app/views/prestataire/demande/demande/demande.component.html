@@ -23,7 +23,7 @@
       </thead>
       <tbody class="table-border-bottom-0">
         <tr *ngFor="let d of demandesList">
-          <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{d.nDemande}}</strong></td>
+          <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{d.mailC}}</strong></td>
           <td>{{d.id}}</td>
           <td>{{d.nomService}}</td>
           <td>{{d.typeService}}</td>
@@ -33,8 +33,8 @@
                 <i class="bx bx-dots-vertical-rounded"></i>
               </button>
               <div class="dropdown-menu">
-                <a class="dropdown-item"  [routerLink]="['/accepterDemande',d.nDemande]" 
-                (click)="Accepter(d)"><i class="bx bx-edit-alt me-1"></i> Accepter</a>
+                <a class="dropdown-item"  routerLink="/prestataire/listclient" 
+                (click)="Accepter(d)"><i class="bx bx-edit-alt me-1" ></i> Accepter</a>
                 <a class="dropdown-item"  [routerLink]="['/suppDemande',d.nDemande]" 
                 (click)="Supprimer(d)"><i class="bx bx-trash me-1"></i> Supprimer</a>
               </div>

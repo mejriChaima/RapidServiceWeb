@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientService } from 'src/app/controller/client.service';
+import { client } from 'src/app/model/client';
 
 @Component({
   selector: 'app-listclient',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listclient.component.css']
 })
 export class ListclientComponent implements OnInit {
+clientList ! : client[];
+client !: client;
 
-  constructor() { }
+  constructor(private clientservice : ClientService) { }
 
   ngOnInit(): void {
+    this.clientservice.getAllClient().subscribe(
+      (data:client[])=>this.clientList=data
+    );
+
   }
+
+  Ajouter(){
+  
+   this.clientservice.addClient(this.client).subscribe(
+   ()=> this.clientList= [this.client, ...this.clientList]
+   );
+    }
 
 }

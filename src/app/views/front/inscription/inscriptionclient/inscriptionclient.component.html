@@ -1,0 +1,109 @@
+<section class="contact_section layout_padding">
+  <div class="custom_heading-container">
+    <h3 class=" ">
+      Inscription Client
+    </h3>
+  </div>
+  <div class="container layout_padding2-top">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+
+
+        <form name="form" #f="ngForm">
+
+
+          <div class="mb-3">
+            <label for="exampleInputFirst_Name1" class="form-label">Nom</label>
+            <input name="firstName" ngModel class="form-control" #firstName="ngModel" />
+            <div *ngIf="firstName.touched && firstName.value?.length >3"
+          class="alert alert-warning my-3" role="alert">
+            merci d'entrer un nom valide
+          </div>
+          </div>
+        
+          <div class="mb-3">
+            <label class="form-label">Prenom</label>
+            <input name="lastName" ngModel class="form-control" #lastName="ngModel" />
+            <div *ngIf="lastName.touched && lastName.value?.length >3"
+            class="alert alert-warning my-3" role="alert">
+              merci d'entrer un prenom valide
+            </div>
+          </div>
+        
+        
+         <!-- <div class="mb-3">
+            <label for="exampleInputCin1" class="form-label">Ville</label>
+            <input type="text" name="Ville" ngModel class="form-control" #Ville="ngModel" />
+            
+            <div *ngIf="Ville.touched "
+            class="alert alert-warning my-3" role="alert">
+              merci d'entrer une Ville valide
+            </div>
+          </div>-->
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Ville</label>
+            <select class="form-control" id="exampleFormControlSelect1"  name="ville" ngModel  #ville="ngModel">
+              
+                <option>Ariana</option>
+                <option>Tunis</option>  
+                <option>Ben Arous</option>
+                <option>La Manouba</option> 
+               <option> Béja</option> 
+               <option>Bizerte</option> 
+               <option>Gabès</option>   
+               <option>Gafsa</option>   
+               <option> Jendouba</option> 
+               <option>Kairouan</option>  
+               <option>Kasserine</option>   
+               <option>Kébili</option>  
+               <option>Le Kef</option>    
+               <option>Mahdia</option>    
+               <option>Médenine </option> 
+                <option>Monastir</option>   
+                <option>Nabeul</option>   
+                <option>Sfax</option> 
+                <option>Sidi Bouzid</option>  
+                <option> Siliana</option>
+                <option>Sousse</option>
+                <option>Tataouine</option>  
+                <option> Tozeur</option>  
+                <option>Zaghouan</option>
+            </select>
+            <div *ngIf="ville.touched "class="alert alert-warning my-3" role="alert">
+              merci se choisir un ville 
+            </div>
+          </div>
+          <div class="mb-3">
+              <label for="exampleInputCin1" class="form-label">Téléphone</label>
+              <input type="text" name="tel" ngModel class="form-control" #tel="ngModel" />
+              
+              <div *ngIf="tel.touched "class="alert alert-warning my-3" role="alert">
+                merci d'entrer numero de télephone valide
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputCin1" class="form-label">E-mail</label>
+              <input type="text" name="mail" ngModel class="form-control" #mail="ngModel" />
+              
+              <div *ngIf="mail.touched "
+              class="alert alert-warning my-3" role="alert">
+                merci d'entrer adresse mail valide
+              </div>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="exampleInputCin1" class="form-label">Mot de passe</label>
+              <input type="text" name="pwd" ngModel class="form-control" #pwd="ngModel" />
+              
+              <div *ngIf="pwd.touched "
+              class="alert alert-warning my-3" role="alert">
+                merci d'entrer mot de passe valide
+              </div>
+            </div>
+            <br>
+            <button class="btn btn-success" type="submit"   class="btn btn-primary" [disabled]="f.invalid">
+              Enregistrer
+            </button>
+            </form>

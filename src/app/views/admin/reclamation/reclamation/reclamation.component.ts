@@ -19,8 +19,7 @@ export class ReclamationComponent implements OnInit {
 
 
   delete(reclamation:reclamation):void {
-    this.reclamationservice.deleteReclamation(reclamation.nRec).subscribe(
-      res=>console.log("suppression de reclamation réussites"));
+    this.reclamationservice.deleteReclamation(reclamation.nRec).subscribe(res=>console.log("suppression de reclamation réussites"));
     
   }
 

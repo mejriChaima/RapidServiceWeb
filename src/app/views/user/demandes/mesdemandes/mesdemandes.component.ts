@@ -1,24 +1,29 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DemandeService } from 'src/app/controller/demande.service';
 import { demandes } from 'src/app/model/demandes';
+import { prestataire } from 'src/app/model/prestataire';
 
 @Component({
-  selector: 'app-demandes',
-  templateUrl: './demandes.component.html',
-  styleUrls: ['./demandes.component.css']
+  selector: 'app-mesdemandes',
+  templateUrl: './mesdemandes.component.html',
+  styleUrls: ['./mesdemandes.component.css']
 })
-export class DemandesComponent implements OnInit {
+export class MesdemandesComponent implements OnInit {
   @Input() Demandes !: demandes;
   @Input() nomService ! : string;
   @Output() deleteEvent= new EventEmitter<demandes>()
 
   public title!: string;
   Listdemande ! : demandes[];
+  Listprestataire !: prestataire[];
+
   demandes ! : demandes;
+
   constructor(private demandeservice: DemandeService) { }
-  
+
   ngOnInit(): void {
-    this.title = 'Mes demandes';
+
+    this.title = '';
     this.demandes = new demandes();
 
     this.demandeservice.getAllDemandes().subscribe(

@@ -13,7 +13,7 @@ import { MenageComponent } from './menage/menage.component';
 const routes: Routes = [
   {path:'',component:ServicesComponent},
   {path:'b',component:BricolageComponent},
-  {path:'Am',component:AmenagementComponent},
+  {path:'d',component:AmenagementComponent},
   {path:'ad',component:AideadomicileComponent},
   {path:'c',component:CoursparticulierComponent},
   {path:'e',component:EnfantComponent},

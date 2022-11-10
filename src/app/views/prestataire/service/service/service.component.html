@@ -1,1 +1,129 @@
-<p>service works!</p>
+<section class="about_section layout_padding">
+    <div class="custom_heading-container">
+        <h3 class=" ">
+          Gestion Des Services 
+        </h3>
+      </div>
+      <form>
+    <br>
+  <div class="mb-3">
+    <label for="exampleInputNom du Service" class="form-label">Nom du Service </label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<select name="pets" id="pet-select">
+    <option value="">--Trouver le nom du Service--</option>
+    <option value="Bricolage">Bricolage</option>
+    <option value="Jardinage">Jardinage</option>
+    <option value="Déménagement">Déménagement</option>
+    <option value="Ménage">Ménage</option>
+    <option value="Enfants">Enfants</option>
+    <option value="Déplacer l electroménager">Déplacer l electroménager</option>
+    <option value="Informatique">Informatique</option>
+    <option value="Cours particuliers">Cours particuliers</option>
+</select>
+<div class="mb-3">
+    <label for="exampleInputNom du Service" class="form-label">Type de Service </label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <select name="pets" id="pet-select">
+            <option selected>Choissisez un type de service</option>
+           <optgroup label="Bricolage">
+              <option value=""></option>
+              <option value="">Aménagement</option>
+              <option value="">Eléctricité</option>
+              <option value="">Rénovation</option>
+              <option value="">Plomberie</option>
+            </optgroup>
+            <optgroup label="Jardinage">
+              <option value="">Tondre la pelouse</option>
+              <option value="">Taille de haie</option>
+              <option value="">Débrouissage</option>
+              <option value="">Déserbage</option>
+              <option value="">Ranger des bois</option>
+              <option value="">Entretien des espaces verre</option>
+              <option value="">Entretien de gazon</option>
+              <option value="">Nettoyage des terrasse</option>
+              <option value="">Saler autour de maison</option>
+            </optgroup>
+            <optgroup label="Déménagement">
+              <option value="">Aide au déménagement</option>
+              <option value="">Déplacer un meuble</option>
+              <option value="">Déplacer de l'éléctromenager</option>
+              <option value="">Débarrasser des encombrants</option>
+            </optgroup>
+            <optgroup label="Ménage">
+              <option value="">Ménage à domicile</option>
+              <option value="">Ménage d'état de lieu</option>
+              <option value="">Repassage </option>
+              <option value="">Lavage automobile</option>
+              <option value="">Netoyage de vitres</option>
+            </optgroup>
+            <optgroup label="Enfants">
+              <option value="">Garde d'enfants</option>
+              <option value="">Garde périscolaire</option> 
+            </optgroup>
+            <optgroup label="Informatique">
+              <option value="">Nettoyer mon ordinateur</option>
+              <option value="">Cours informatique</option>
+              <option value="">Installer une imprimante</option>
+              <option value="">Installer une box</option>
+            </optgroup>
+            <optgroup label="Aide à domicile">
+              <option value="">Maintien à domicile</option>
+              <option value="">Livraison des médicaments</option>
+              <option value="">Livrer des courses</option>
+              <option value="">Livraison à domicile</option>
+              <option value="">Accompagnement en course</option>
+              <option value="">Accompagnement au rendez-vous médicaux</option>
+              <option value="">Preparer des repas</option>
+              <option value="">Serveur/Serveuse</option>
+              <option value="">Retouche couture</option>
+            </optgroup>
+        <optgroup label="Cours particulier">
+              <option value="">Lanque</option>
+              <option value="">Matiére</option>
+            </optgroup>
+          </select>
+        </div>
+        </div>  
+
+
+        <button type="button" class="btn btn-primary" id="btn1" (click)="save()" >Ajouter</button>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</form> 
+
+
+<img src="https://img.freepik.com/vecteurs-libre/ensemble-metiers-maison-renovation_23-2148665512.jpg?w=2000" width="30%" height="14%" alt="">
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+<table class="table">
+    <thead>
+      <tr>
+
+        <th scope="col">Nom Du Service</th>
+        <th scope="col">Type Du Service</th>
+        <th scope="col">Action</th>
+    
+       </tr>
+    </thead>
+    <tbody class="table-border-bottom-0">
+      <tr *ngFor="let s of listservice">
+        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> {{s.nomService}}</td>
+        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> {{s.typeService}}</td>
+         <td><button type="button" class="btn btn-danger">Supprimer</button></td>
+    
+ </tr>
+    </tbody>
+                  </table>
+
+
+
+
+
+
+
+
+  </section>

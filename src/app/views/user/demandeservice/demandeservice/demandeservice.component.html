@@ -14,179 +14,115 @@
                   <div class="row">
                     <div class="col-md-6 mx-auto">
             
-           
-<div class="form">
-  <h1>{{title}}</h1>
-<form #f="ngForm">
+            
+                      <form name="form" #f="ngForm">
+            
+            
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input name="email" ngModel email class="form-control" #email="ngModel" />
+                      
+                          <div *ngIf="(!email.valid && email.touched) || (!email.value && email.touched)"
+                          class="alert alert-warning my-3" role="alert">
+                            merci d'entrer un email valid
+                          </div>
+                        </div>
+                      
+                        <div class="mb-3">
+                          <label for="exampleInputNewPassword1" class="form-label">Password</label>
+                          <input name="password" ngModel class="form-control" #password="ngModel" />
+                     
+                          <div *ngIf="(!password.valid && password.touched) || (!password.value && password.touched) || (password.touched && password.value?.length >3)"
 
-  <div class="row">
-    <div class="form-group ">
-      <label>id:*</label>
-      <input type="number"  [(ngModel)]="demandes.id" minlength="3" name="id"
-      required placeholder="..." class="form-control" #I="ngModel">
-    </div>
-    <div class="alert alert-danger col-md-6" *ngIf="I.invalid && I.touched">
-      <div *ngIf="I.hasError('required')">this field is required</div>
-      <div *ngIf="I.hasError('minlength')">the minlength of this field is equal to 3</div>
-    </div>
-  </div>
+                          class="alert alert-warning my-3" role="alert">
+                            merci d'entrer une mot de passe  valid
+                          </div>
+                        </div>
 
-  <div class="row">
-    <div class="form-group ">
-      <label>Email:*</label>
-      <input type="text"  [(ngModel)]="demandes.mailC" minlength="3" name="mailC"
-      required placeholder="@gmail.com" class="form-control" #E="ngModel">
-    </div>
-    <div class="alert alert-danger col-md-6" *ngIf="E.invalid && E.touched">
-      <div *ngIf="E.hasError('required')">this field is required</div>
-      <div *ngIf="E.hasError('minlength')">the minlength of this field is equal to 3</div>
-    </div>
-  </div>
+            
+                        <div class="form-group">
+                          <label for="selection">Liste de service</label>
+                          <select id="selection" class="form-control">
+                            <option selected>Choissisez un service</option>
 
+                           <optgroup label="Bricolage">
+                              <option value=""></option>
+                              <option value="">Aménagement</option>
+                              <option value="">Eléctricité</option>
+                              <option value="">Rénovation</option>
+                              <option value="">Plomberie</option>
+                            </optgroup>
+                            <optgroup label="Jardinage">
+                              <option value="">Tondre la pelouse</option>
+                              <option value="">Taille de haie</option>
+                              <option value="">Débrouissage</option>
+                              <option value="">Déserbage</option>
+                              <option value="">Ranger des bois</option>
+                              <option value="">Entretien des espaces verre</option>
+                              <option value="">Entretien de gazon</option>
+                              <option value="">Nettoyage des terrasse</option>
+                              <option value="">Saler autour de maison</option>
+                              
+                            </optgroup>
+                            <optgroup label="Déménagement">
+                              <option value="">Aide au déménagement</option>
+                              <option value="">Déplacer un meuble</option>
+                              <option value="">Déplacer de l'éléctromenager</option>
+                              <option value="">Débarrasser des encombrants</option>
+                        
+                            </optgroup>
+                            <optgroup label="Ménage">
+                              <option value="">Ménage à domicile</option>
+                              <option value="">Ménage d'état de lieu</option>
+                              <option value="">Repassage </option>
+                              <option value="">Lavage automobile</option>
+                              <option value="">Netoyage de vitres</option>
+                            </optgroup>
+                            <optgroup label="Enfants">
+                              <option value="">Garde d'enfants</option>
+                              <option value="">Garde périscolaire</option>
+                              
+                            </optgroup>
+                            <optgroup label="Informatique">
+                              <option value="">Nettoyer mon ordinateur</option>
+                              <option value="">Cours informatique</option>
+                              <option value="">Installer une imprimante</option>
+                              <option value="">Installer une box</option>
+                            </optgroup>
+                            <optgroup label="Aide à domicile">
+                              <option value="">Maintien à domicile</option>
+                              <option value="">Livraison des médicaments</option>
+                              <option value="">Livrer des courses</option>
+                              <option value="">Livraison à domicile</option>
+                              <option value="">Accompagnement en course</option>
+                              <option value="">Accompagnement au rendez-vous médicaux</option>
+                              <option value="">Preparer des repas</option>
+                              <option value="">Serveur/Serveuse</option>
+                              <option value="">Retouche couture</option>
+                            </optgroup>
+                            <optgroup label="Cours particulier">
+                              <option value="">Lanque</option>
+                              <option value="">Matiére</option>
+                              
+                            </optgroup>
+                          </select>
+                        </div>
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Liste de prestataire</label>
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                          <option selected>Choissisez un prestataire</option>
+                          <option value="1">One</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
 
-  <div class="row">
-    <div class="form-group ">
-      <label>Password:*</label>
-      <input type="text"  [(ngModel)]="demandes.passwordC" minlength="3" name="passwordC"
-      required placeholder="password" class="form-control" #p="ngModel">
-    </div>
-    <div class="alert alert-danger col-md-6" *ngIf="p.invalid && p.touched">
-      <div *ngIf="p.hasError('required')">this field is required</div>
-      <div *ngIf="p.hasError('minlength')">the minlength of this field is equal to 3</div>
-    </div>
-  </div>
-
-
-  <div class="row">
-  <label >Nom de service</label>
-  <select required name="nomService" class="form-control"
-            [(ngModel)]="demandes.nomService"  #demandes_nomService="ngModel">
-
-<option value="Bricolage">Bricolage</option>
-<option value="Jardinage">Jardinage</option>
-<option value="Déménagement">Déménagement</option>
-<option value="Ménage">Ménage</option>
-<option value="Enfants">Enfants</option>
-<option value="Informatique">Informatique</option>
-<option value="Aide à domicile">Aide à domicile</option>
-<option value="Cours particulier">Cours particulier</option>
-</select>
-
-<div class="alert alert-danger" *ngIf="demandes_nomService.invalid && demandes_nomService.touched">
-  error:Nom de service  required!
-</div>
-</div>
-
-
- 
-<div class="row">
-  <label for="selection">Type de service</label>
-  <select id="selection" class="form-control"name="typeService" 
-  [(ngModel)]="demandes.typeService"  #demandes_typeService="ngModel">
-
-     <optgroup label="Bricolage">
-      <option value="Aménagement">Aménagement</option>
-      <option value="Eléctricité">Eléctricité</option>
-      <option value="Rénovation">Rénovation</option>
-      <option value="Plomberie">Plomberie</option>
-    </optgroup>
-    <optgroup label="Jardinage">
-      <option value="Tondre la pelouse">Tondre la pelouse</option>
-      <option value="Taille de haie">Taille de haie</option>
-      <option value="Débrouissage">Débrouissage</option>
-      <option value="Déserbage">Déserbage</option>
-      <option value="Ranger des bois">Ranger des bois</option>
-      <option value="Entretien des espaces verre">Entretien des espaces verre</option>
-      <option value="Entretien de gazon">Entretien de gazon</option>
-      <option value="Nettoyage des terrasse">Nettoyage des terrasse</option>
-      <option value="Saler autour de maison">Saler autour de maison</option>
-      
-    </optgroup>
-    <optgroup label="Déménagement">
-      <option value="Aide au déménagement">Aide au déménagement</option>
-      <option value="Déplacer un meuble">Déplacer un meuble</option>
-      <option value="Déplacer de l'éléctromenager">Déplacer de l'éléctromenager</option>
-      <option value="Débarrasser des encombrants">Débarrasser des encombrants</option>
-
-    </optgroup>
-    <optgroup label="Ménage">
-      <option value="Ménage à domicile">Ménage à domicile</option>
-      <option value="Ménage d'état de lieu">Ménage d'état de lieu</option>
-      <option value="Repassage">Repassage </option>
-      <option value="Lavage automobile">Lavage automobile</option>
-      <option value="Netoyage de vitres">Netoyage de vitres</option>
-    </optgroup>
-    <optgroup label="Enfants">
-      <option value="Garde d'enfants">Garde d'enfants</option>
-      <option value="Garde périscolaire">Garde périscolaire</option>
-      
-    </optgroup>
-    <optgroup label="Informatique">
-      <option value="Nettoyer mon ordinateu">Nettoyer mon ordinateur</option>
-      <option value="Cours informatique">Cours informatique</option>
-      <option value="Installer une imprimante">Installer une imprimante</option>
-      <option value="Installer une box">Installer une box</option>
-    </optgroup>
-    <optgroup label="Aide à domicile">
-      <option value="Maintien à domicile">Maintien à domicile</option>
-      <option value="Livraison des médicaments">Livraison des médicaments</option>
-      <option value="Livrer des courses">Livrer des courses</option>
-      <option value="Livraison à domicile">Livraison à domicile</option>
-      <option value="Accompagnement en course">Accompagnement en course</option>
-      <option value="Accompagnement au rendez-vous médicaux">Accompagnement au rendez-vous médicaux</option>
-      <option value="Preparer des repas">Preparer des repas</option>
-      <option value="Serveur/Serveuse">Serveur/Serveuse</option>
-      <option value="Retouche couture">Retouche couture</option>
-    </optgroup>
-    <optgroup label="Cours particulier">
-      <option value="">Lanque</option>
-      <option value="">Matiére</option>
-      
-    </optgroup>
-  </select>
-
-  
- 
-
-</div>
-   
-
-  
-
- 
-<div class="form-group">
-  <label>Liste de prestataire</label>
-  <select required name="nomPrestataire" class="form-control"
-          [(ngModel)]="demandes.nomPrestataire"  #demandes_nomPrestataire="ngModel">
-    <option value="ahmed"> ahmed</option>
-    <option value="mohamed"> mohamed</option>
-    <option value="saber"> saber</option>
-  </select>
-</div>
-<div class="alert alert-danger" *ngIf="demandes_nomPrestataire.invalid && demandes_nomPrestataire.touched">
-  error: nomPrestataire  required!
-</div>
-
-
-
- 
-  <br>
-  <button class="btn btn-success" (click)="save()" [disabled]="f.invalid">
-    save
-  </button>
-
-</form>
-
-</div>
-
-
-
+                        <div class="d-flex justify-content-center ">
+                          <button type="submit" class="btn btn-primary" [disabled]="f.invalid">Submit</button>
+                     
+                        </div>
+                      </form>
                     </div>
                   </div>
             
                 </div>
-              
-
-
               </section>
 
