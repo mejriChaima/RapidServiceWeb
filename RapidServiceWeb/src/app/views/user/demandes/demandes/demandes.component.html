@@ -1,0 +1,46 @@
+
+<div class="custom_heading-container">
+    <h3 class=" ">
+      Mes demandes
+    </h3>
+  </div>
+
+
+
+ 
+  <section class="contact_section layout_padding">
+
+    <div class="container layout_padding2-top">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+  
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>N Demande</th>
+                    <th>Nom Service</th>
+                    <th>Type Service</th>
+                    <th>Nom prestataire</th>
+                    <th>Status</th>
+                   </tr>
+                </thead>
+                <tbody class="table-border-bottom-0">
+                  <tr *ngFor="let d of Listdemande">
+                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{d.nDemande}}</strong></td>
+                    <td>{{d.idClient}}</td>
+                    <td>{{d.nomService}}</td>
+                    <td>{{d.typeService}}</td>
+                    <td><button type="button" class="btn btn-danger" (click)="Supprimer(d)">Supprimer</button></td>
+
+             </tr>
+                </tbody>
+                              </table>
+
+
+  
+
+
+          </div>
+        </div>
+    </div>
+  </section>

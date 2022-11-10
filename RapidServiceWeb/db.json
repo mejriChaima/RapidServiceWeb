@@ -1,0 +1,122 @@
+{
+  "reclamation": [
+    {
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "missionDesc": "mal fait"
+    },
+    {
+      "nRec": 2,
+      "nom": "abessi",
+      "prenom": "hela",
+      "email": "abessi.hela@esprit.tn",
+      "tel": 20457222,
+      "mission": "jardinage",
+      "datemission": "20/09/2022",
+      "nomPrestataire": "khaled",
+      "missionDesc": "mal fait"
+    }
+  ],
+  "reponse": [
+    {
+      "nRep": 1,
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "reponseRec": "En cours de traitement"
+    },
+    {
+      "nRep": 2,
+      "nRec": 1,
+      "nom": "mejri",
+      "prenom": "chaima",
+      "email": "mejri.chaima@esprit.tn",
+      "tel": 92000222,
+      "mission": "Plomberie",
+      "datemission": "30/10/2022",
+      "nomPrestataire": "Mohamed",
+      "reponseRec": "Reclamation acceptée"
+    },
+    {
+      "nRep": 3,
+      "nRec": 2,
+      "nom": "abessi",
+      "prenom": "hela",
+      "email": "abessi.hela@esprit.tn",
+      "tel": 20457222,
+      "mission": "jardinage",
+      "datemission": "20/09/2022",
+      "nomPrestataire": "khaled",
+      "reponseRec": "En cours de traitement"
+    }
+  ],
+  "demandeP": [
+    {
+      "nDemande": 1,
+      "idClient": "1",
+      "nomService": "bricolage",
+      "typeService": "amenagement",
+      "Actions": ""
+    },
+    {
+      "nDemande": 2,
+      "idClient": "5",
+      "nomService": "bricolage",
+      "typeService": "amenagement",
+      "Actions": ""
+    }
+  ],
+  "demandeC": [
+    {
+      "nDemande": 1,
+      "nomPrestataire": "Samir jabri",
+      "nomService": "bricolage",
+      "typeService": "amenagement",
+      "Status": ""
+    },
+    {
+      "nDemande": 2,
+      "nomPrestataire": "Mahrez Jabri",
+      "nomService": "bricolage",
+      "typeService": "amenagement",
+      "Status": ""
+    }
+  ],
+  "prestataire": [
+    {
+      "id_Prestataire": 1,
+      "nom": "Samir jabri",
+      "prenom": "bricolage",
+      "ville": "string",
+      "tel": "string",
+      "mail": "string",
+      "password": "string",
+      "experience": "string",
+      "nomService": "string",
+      "typeService ": "string"
+    },
+    {
+      "id_Prestataire": 1,
+      "nom": "Bouhleli",
+      "prenom": "Ichrak",
+      "ville": "Béja",
+      "tel": "21345934",
+      "mail": "gharbisamir@gmail.com",
+      "password": "112233",
+      "experience": "experience de 2 ans",
+      "nomService": "Bricolage",
+      "typeService ": "Electricité"
+    }
+  ]
+}

@@ -1,5 +1,4 @@
-
-<!-- Layout wrapper -->
+!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar">
   <div class="layout-container">
          <!-- Menu -->
@@ -86,51 +85,23 @@
       <span class="menu-header-text">Utilisateurs</span>
     </li>
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-dock-top"></i>
-        <div data-i18n="Account Settings">Clients</div>
+      <a routerLink="/admin/gestionclients" class="menu-link menu-toggle" >
+        <i class="menu-icon tf-icons bx bx-detail"></i>
+        <div data-i18n="Form Elements">Clients</div>
       </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="pages-account-settings-account.html" class="menu-link">
-            <div data-i18n="Account">Prestataires</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="pages-account-settings-notifications.html" class="menu-link">
-            <div data-i18n="Notifications">Notifications</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="pages-account-settings-connections.html" class="menu-link">
-            <div data-i18n="Connections">Connections</div>
-          </a>
-        </li>
-      </ul>
+      
+    
+      
     </li>
 
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-        <div data-i18n="Authentications">Prestataires</div>
+      <a routerLink="/admin/gestionprestataire" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-detail"></i>
+        <div data-i18n="Form Elements">Prestataires</div>
       </a>
-      <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="auth-login-basic.html" class="menu-link" target="_blank">
-            <div data-i18n="Basic">connexion</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="auth-register-basic.html" class="menu-link" target="_blank">
-            <div data-i18n="Basic">S'inscrire</div>
-          </a>
-        </li>
-        <li class="menu-item">
-          <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-            <div data-i18n="Basic">Mot de passe oublier</div>
-          </a>
-        </li>
-      </ul>
+      
+    
+      
     </li>
 
 
@@ -165,7 +136,7 @@
     <!-- Avis -->
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Avis</span></li>
     <li class="menu-item">
-      <a href="javascript:void(0);" class="menu-link menu-toggle">
+      <a  routerLink="/admin/avis" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons bx bx-detail"></i>
         <div data-i18n="Form Layouts">List avis</div>
       </a>
@@ -233,7 +204,7 @@
             data-size="large"
             data-show-count="true"
             aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-            >Etoile</a
+            >Star</a
           >
         </li>
 
@@ -254,7 +225,7 @@
                     </div>
                   </div>
                   <div class="flex-grow-1">
-                    <span class="fw-semibold d-block">Bouhleli Ichrak</span>
+                    <span class="fw-semibold d-block">John Doe</span>
                     <small class="text-muted">Admin</small>
                   </div>
                 </div>
@@ -266,20 +237,20 @@
             <li>
               <a class="dropdown-item" href="#">
                 <i class="bx bx-user me-2"></i>
-                <span class="align-middle">Mon profil</span>
+                <span class="align-middle">My Profile</span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
                 <i class="bx bx-cog me-2"></i>
-                <span class="align-middle">Parametre</span>
+                <span class="align-middle">Settings</span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
                 <span class="d-flex align-items-center align-middle">
                   <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                  <span class="flex-grow-1 align-middle">B</span>
+                  <span class="flex-grow-1 align-middle">Billing</span>
                   <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
                 </span>
               </a>
@@ -290,7 +261,7 @@
             <li>
               <a class="dropdown-item" href="auth-login-basic.html">
                 <i class="bx bx-power-off me-2"></i>
-                <span class="align-middle">Déconnexion</span>
+                <span class="align-middle">Log Out</span>
               </a>
             </li>
           </ul>
@@ -311,6 +282,7 @@
 </div>
  <!-- / Layout wrapper -->
  
+
 
 
 

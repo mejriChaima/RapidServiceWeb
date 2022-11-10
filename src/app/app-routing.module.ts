@@ -21,8 +21,9 @@ const routes: Routes = [
     {path:'dashboard',loadChildren:()=>import('./views/admin/dashbord/dashbord.module').then(m=>m.DashbordModule)},
     {path:'reclamation',loadChildren:()=>import('./views/admin/reclamation/reclamation.module').then(m=>m.ReclamationModule)},
     {path:'statistique',loadChildren:()=>import('./views/admin/statistique/statistique.module').then(m=>m.StatistiqueModule)},
-    {path:'categorieservice',loadChildren:()=>import('./views/admin/categorieservice/categorieservice.module').then(m=>m.CategorieserviceModule)}
- 
+    {path:'categorieservice',loadChildren:()=>import('./views/admin/categorieservice/categorieservice.module').then(m=>m.CategorieserviceModule)},
+    {path:'gestionclients',loadChildren:()=>import('./views/admin/gestionclients/gestionclients.module').then(m=>m.GestionclientsModule)},
+    {path:'gestionprestataire',loadChildren:()=>import('./views/admin/gestionprestataire/gestionprestataire.module').then(m=>m.GestionprestataireModule)}
   ]},
   {path:'user',component:UserLayoutComponent,
   children:[
@@ -32,7 +33,8 @@ const routes: Routes = [
     {path: 'connexion',loadChildren:()=>import('./views/user/connexion/connexion.module').then(m=>m.ConnexionModule)},
     {path: 'demandes',loadChildren:()=>import('./views/user/demandes/demandes.module').then(m=>m.DemandesModule)},
     {path: 'demandeservice',loadChildren:()=>import('./views/user/demandeservice/demandeservice.module').then(m=>m.DemandeserviceModule)},
-    {path: 'reclamation',loadChildren:()=>import('./views/user/reclamation/reclamation.module').then(m=>m.ReclamationModule)}
+    {path: 'reclamation',loadChildren:()=>import('./views/user/reclamation/reclamation.module').then(m=>m.ReclamationModule)},
+    {path: 'profilclient',loadChildren:()=>import('./views/user/profilclient/profilclient.module').then(m=>m.ProfilclientModule)}
 
 
     

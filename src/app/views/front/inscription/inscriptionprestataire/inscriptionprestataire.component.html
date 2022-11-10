@@ -17,7 +17,7 @@
               <input name="firstName" ngModel class="form-control" #firstName="ngModel" />
               <div *ngIf="firstName.touched && firstName.value?.length >3"
             class="alert alert-warning my-3" role="alert">
-              merci d'entrer un nom valid
+              merci d'entrer un nom valide
             </div>
             </div>
           
@@ -26,18 +26,42 @@
               <input name="lastName" ngModel class="form-control" #lastName="ngModel" />
               <div *ngIf="lastName.touched && lastName.value?.length >3"
               class="alert alert-warning my-3" role="alert">
-                merci d'entrer un prenom valid
+                merci d'entrer un prenom valide
               </div>
             </div>
           
           
-            <div class="mb-3">
-              <label for="exampleInputCin1" class="form-label">Ville</label>
-              <input type="text" name="Ville" ngModel class="form-control" #Ville="ngModel" />
-              
-              <div *ngIf="Ville.touched "
-              class="alert alert-warning my-3" role="alert">
-                merci d'entrer une Ville valid
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Ville</label>
+              <select class="form-control" id="exampleFormControlSelect1"  name="ville" ngModel  #ville="ngModel">
+                
+                  <option>Ariana</option>
+                  <option>Tunis</option>	
+                  <option>Ben Arous</option>
+                  <option>La Manouba</option> 
+                 <option> Béja</option>	
+                 <option>Bizerte</option>	
+                 <option>Gabès</option> 	
+                 <option>Gafsa</option> 	
+                 <option> Jendouba</option>	
+                 <option>Kairouan</option> 	
+                 <option>Kasserine</option> 	
+                 <option>Kébili</option> 	
+                 <option>Le Kef</option>  	
+                 <option>Mahdia</option>		
+                 <option>Médenine	</option> 
+                  <option>Monastir</option> 	
+                  <option>Nabeul</option> 	
+                  <option>Sfax</option>	
+                  <option>Sidi Bouzid</option>	
+                  <option> Siliana</option>
+                  <option>Sousse</option>
+                  <option>Tataouine</option> 	
+                  <option> Tozeur</option>	
+                  <option>Zaghouan</option>
+              </select>
+              <div *ngIf="ville.touched "class="alert alert-warning my-3" role="alert">
+                merci se choisir un ville 
               </div>
             </div>
             
@@ -48,7 +72,7 @@
           
               <div *ngIf="(!email.valid && email.touched) || (!email.value && email.touched)"
               class="alert alert-warning my-3" role="alert">
-                merci d'entrer un email valid
+                merci d'entrer un email valide
               </div>
             </div>
           
@@ -58,7 +82,7 @@
           
               <div *ngIf="password.touched && password.value?.length >3"
               class="alert alert-warning my-3" role="alert">
-                merci d'entrer une mot de passe  valid
+                merci d'entrer une mot de passe  valide
               </div>
             </div>
           
@@ -67,7 +91,7 @@
               <input name="phoneNumber" ngModel class="form-control" #phoneNumber="ngModel" />
               <div *ngIf="phoneNumber.touched && phoneNumber.value?.length !== 8"
               class="alert alert-warning my-3" role="alert">
-                merci d'entrer un phone number valid
+                merci d'entrer un phone number valide
               </div>
             </div>
            
@@ -77,14 +101,14 @@
           
               <div *ngIf="(!Experience.valid && Experience.touched) || (!Experience.value && Experience.touched)"
               class="alert alert-warning my-3" role="alert">
-                merci d'entrer un email valid
+                merci d'entrer un email valide
               </div>
             </div>
 
 
             <div class="form-group">
               <label for="selection">Liste Services</label>
-              <select id="selection" class="form-control">
+              <select id="selection" class="form-control" name="service" ngModel  #service="ngModel">
                 <option value="">Service sous Service...</option>
                 <optgroup label="Bricolage">
                   <option value=""></option>
@@ -147,10 +171,13 @@
                   
                 </optgroup>
               </select>
+              <div *ngIf="service.touched "class="alert alert-warning my-3" role="alert">
+                merci se choisir un service
+              </div>
             </div>
           
             <div class="d-flex justify-content-center ">
-              <button type="submit" class="btn btn-primary" >Submit</button>
+              <button type="submit"   class="btn btn-primary" [disabled]="f.invalid">Enregistrer</button>
          
             </div>
           </form>
