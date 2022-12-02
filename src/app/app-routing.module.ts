@@ -24,6 +24,7 @@ const routes: Routes = [
     {path:'categorieservice',loadChildren:()=>import('./views/admin/categorieservice/categorieservice.module').then(m=>m.CategorieserviceModule)},
     {path:'avis',loadChildren:()=>import('./views/admin/avis/avis.module').then(m=>m.AvisModule)},
     {path:'gestionclients',loadChildren:()=>import('./views/admin/gestionclients/gestionclients.module').then(m=>m.GestionclientsModule)},
+    {path:'commentaires',loadChildren:()=>import('./views/admin/commentaires/commentaires.module').then(m=>m.CommentairesModule)},
     {path:'gestionprestataire',loadChildren:()=>import('./views/admin/gestionprestataire/gestionprestataire.module').then(m=>m.GestionprestataireModule)}
  
   ]},
@@ -31,9 +32,10 @@ const routes: Routes = [
   children:[
     {path: '',loadChildren:()=>import('./views/user/accueil/accueil.module').then(m=>m.AccueilModule)},
     {path: 'accueil',loadChildren:()=>import('./views/user/accueil/accueil.module').then(m=>m.AccueilModule)},
-    {path: 'ser',loadChildren:()=>import('./views/user/services/services.module').then(m=>m.ServicesModule)},
+    {path: 'User',loadChildren:()=>import('./views/user/services/services.module').then(m=>m.ServicesModule)},
     {path: 'connexion',loadChildren:()=>import('./views/user/connexion/connexion.module').then(m=>m.ConnexionModule)},
     {path: 'demandes',loadChildren:()=>import('./views/user/demandes/demandes.module').then(m=>m.DemandesModule)},
+    {path: 'profilclient',loadChildren:()=>import('./views/user/profilclient/profilclient.module').then(m=>m.ProfilclientModule)},
     {path: 'mesreclamations',loadChildren:()=>import('./views/user/reclamation/reclamation.module').then(m=>m.ReclamationModule)}
 
     
@@ -44,7 +46,9 @@ children:[
  {path:'accueils',loadChildren:()=>import('./views/prestataire/accueils/accueils.module').then(m=>m.AccueilsModule)},
  {path:'service',loadChildren:()=>import('./views/prestataire/service/service.module').then(m=>m.ServiceModule)},
  {path:'demande',loadChildren:()=>import('./views/prestataire/demande/demande.module').then(m=>m.DemandeModule)},
- {path:'listclient',loadChildren:()=>import('./views/prestataire/listclient/listclient.module').then(m=>m.ListclientModule)}
+ {path:'listclient',loadChildren:()=>import('./views/prestataire/listclient/listclient.module').then(m=>m.ListclientModule)},
+ {path:'commentaires',loadChildren:()=>import('./views/prestataire/commentaires/commentaires.module').then(m=>m.CommentairesModule)},
+ {path:'monprofil',loadChildren:()=>import('./views/prestataire/monprofil/monprofil.module').then(m=>m.MonprofilModule)}
 
 ]}
 ];

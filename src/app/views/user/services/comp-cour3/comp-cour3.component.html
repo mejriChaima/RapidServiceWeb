@@ -1,0 +1,102 @@
+<section class="contact_section layout_padding">
+    <div class="container layout_padding2-top">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form #f="ngForm">
+
+            <h4>Quel jour vous convient le mieux ?</h4>
+            <div>
+                <input
+                  type="date"
+                  placeholder="Date "
+                  name="date"
+                  min="2020-01-01"
+                  max="2025-12-31"
+                  [(ngModel)]="demandes.date"
+                  required
+                  #date="ngModel" />
+              </div>
+              <div
+                *ngIf="date.touched && date.invalid"
+                class="alert alert-danger"
+                role="alert">
+                <div *ngIf="date?.errors?.['required']">
+                  champ date  obligatoire !</div>
+              </div>
+
+              <h4>Quelle heure vous convient le mieux ?</h4>
+            <div>
+                <input type="time" id="appt" name="appt"
+                  placeholder="heure "
+                  name="heure"
+                [(ngModel)]="demandes.heure"
+                  required
+                  #heure="ngModel" />
+              </div>
+              <div
+                *ngIf="heure.touched && heure.invalid"
+                class="alert alert-danger"
+                role="alert">
+                <div *ngIf="heure?.errors?.['required']">
+                  champ heure  obligatoire !</div>
+              </div>
+
+              <h4>Quelle est l'adresse de la prestation ?</h4>
+            <div>
+                <input type="adresse"
+                  placeholder="adresse "
+                  name="adresse"
+                 [(ngModel)]="demandes.adresse"
+                  required
+                  #adresse="ngModel" />
+              </div>
+              <div
+                *ngIf="adresse.touched && adresse.invalid"
+                class="alert alert-danger"
+                role="alert">
+                <div *ngIf="adresse?.errors?.['required']">
+                  champ adresse  obligatoire !</div>
+              </div>
+
+              <h4>À quel numéro êtes-vous joignable en cas de besoin ?</h4>
+            <div>
+                <input type="number"
+                  placeholder="+ 216  "
+                  name="tel"
+                 [(ngModel)]="demandes.tel"
+                  required
+                  #tel="ngModel" />
+              </div>
+              <div
+                *ngIf="tel.touched && tel.invalid"
+                class="alert alert-danger"
+                role="alert">
+                <div *ngIf="tel?.errors?.['required']">
+                  champ tel  obligatoire !</div>
+              </div>
+
+              <h4>Quelle est votre adresse e-mail ?</h4>
+              <div>
+                  <input type="email"
+                    placeholder="@gmail.com  "
+                    name="mail"
+                   [(ngModel)]="demandes.mail"
+                    required
+                    #mail="ngModel" />
+                </div>
+                <div
+                  *ngIf="mail.touched && mail.invalid"
+                  class="alert alert-danger"
+                  role="alert">
+                  <div *ngIf="mail?.errors?.['required']">
+                    champ mail  obligatoire !</div>
+                </div>
+                
+           
+
+            <a routerLink="/user/User/cour2">Retour</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <button class="btn btn-success" routerLink="/user/User/ls">
+       continuer
+       </button>
+    </form>
+        </div></div></div></section>

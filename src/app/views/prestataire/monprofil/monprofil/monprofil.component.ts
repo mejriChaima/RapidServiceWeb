@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Fichier } from 'src/app/model/fichier';
 
 @Component({
   selector: 'app-monprofil',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./monprofil.component.css']
 })
 export class MonprofilComponent implements OnInit {
-
+  Listfichier!: Fichier [];
   constructor() { }
 
   ngOnInit(): void {

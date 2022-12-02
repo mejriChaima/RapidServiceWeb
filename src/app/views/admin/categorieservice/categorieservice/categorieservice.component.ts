@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategorieSService } from 'src/app/controller/categorie-s.service';
-import { categorieS } from 'src/app/model/categorieS';
+import { service } from 'src/app/model/service';
 
 @Component({
   selector: 'app-categorieservice',
@@ -8,21 +8,21 @@ import { categorieS } from 'src/app/model/categorieS';
   styleUrls: ['./categorieservice.component.css']
 })
 export class CategorieserviceComponent implements OnInit {
-  listcat ! : categorieS[];
-  categorieS ! : categorieS;
+  listcat ! : service[];
+  service ! : service;
 
   constructor(private categorieSService : CategorieSService) { }
 
   ngOnInit(): void {
 
     this.categorieSService.getAllCategorie().subscribe(
-      (data:categorieS[]) => this.listcat = data);
+      (data:service[]) => this.listcat = data);
   }
 
 
 
-  delete(categorieS:categorieS):void {
-    let j = this.listcat.indexOf(categorieS);
+  delete(service:service):void {
+    let j = this.listcat.indexOf(service);
     if(j!=-1){
     this.listcat.splice(j, 1);
     
@@ -30,8 +30,8 @@ export class CategorieserviceComponent implements OnInit {
   }
 
   save(){
-    this.categorieSService.addCategorie(this.categorieS).subscribe(
-    ()=> this.listcat= [this.categorieS, ...this.listcat]
+    this.categorieSService.addCategorie(this.service).subscribe(
+    ()=> this.listcat= [this.service, ...this.listcat]
     );
     }
 }

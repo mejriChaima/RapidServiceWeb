@@ -9,8 +9,11 @@ import { demandes } from '../model/demandes';
 export class DemandeService {
 
   demandeUrl:string='http://localhost:3000/demandeC'
-  url:string='http://localhost:3000/demandeP'
-
+  url:string='http://localhost:3000/demandes/fetch'
+  urlgetbyid:string='http://localhost:3000/demandes/demandes/:id'
+  urlpost:string='http://localhost:3000/demandes/add'
+  urldelete:string='http://localhost:3000/demandes/remove/'
+  urlupdate:string='http://localhost:3000/demandes/update/:id'
   httpOptions = {
     headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -21,28 +24,25 @@ export class DemandeService {
   constructor(private http : HttpClient) { }
 //C
 getAllDemandes(){
-    return this.http.get<demandes[]>(this.demandeUrl);
+    return this.http.get<demandes[]>(this.url);
+  }
+  getById(id:number){
+    return this.http.get<demandes>(this. urlgetbyid+id)
   }
 
 addDemande(d:demandes){
-    return this.http.post(this.demandeUrl,d);
+    return this.http.post(this.urlpost,d);
   }
 
-  deleteDemande(id:number){
-    return this.http.delete(this.demandeUrl+id);
+  deleteDemande(id:any){
+    return this.http.delete(this.urldelete+id);
     alert("Vous avez supprimer une demande");
   }
-
-  
-  
-
-  updateDemande(demandes : demandes){
-    return this.http.put(this.demandeUrl+demandes.id,demandes)
+ 
+   updateDemande(data: any, id: any){
+    return this.http.put(this.urlupdate+id,data);
   }
-  getById(id:number){
-    return this.http.get<demandes>(this.demandeUrl+id)
-  }
-
+ 
   //p
   getAllDemande(){
     return this.http.get<demandes[]>(this.url);

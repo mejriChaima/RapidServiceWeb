@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ServicesComponent } from '../../front/services/services/services.component';
 import { AideadomicileSComponent } from './aideadomicile-s/aideadomicile-s.component';
 import { BricolageSComponent } from './bricolage-s/bricolage-s.component';
+import { CompCour1Component } from './comp-cour1/comp-cour1.component';
+import { CompCour2Component } from './comp-cour2/comp-cour2.component';
+import { CompCour3Component } from './comp-cour3/comp-cour3.component';
+import { CompCour4Component } from './comp-cour4/comp-cour4.component';
 import { CoursPSComponent } from './cours-ps/cours-ps.component';
 import { DemenagementSComponent } from './demenagement-s/demenagement-s.component';
 import { EnfantSComponent } from './enfant-s/enfant-s.component';
@@ -14,7 +17,6 @@ import { MenageSComponent } from './menage-s/menage-s.component';
 import { ProfilPComponent } from './profil-p/profil-p.component';
 
 const routes: Routes = [
-  {path:'',component:ServicesComponent},
   {path:'bs',component:BricolageSComponent},
   {path:'ads',component:AideadomicileSComponent},
   {path:'cs',component:CoursPSComponent},
@@ -26,6 +28,11 @@ const routes: Routes = [
   {path:'ls',component:ListvilleSComponent},
   {path:'pp',component:ListprestataireComponent},
   {path:'pr',component:ProfilPComponent},
+  {path:'cour1',component:CompCour1Component},
+  {path:'cour2',component:CompCour2Component},
+  {path:'cour3',component:CompCour3Component},
+  {path:'cour4',component:CompCour4Component},
+
 
 
  ];

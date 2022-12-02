@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DemandeService } from 'src/app/controller/demande.service';
 import { demandes } from 'src/app/model/demandes';
+import { prestataire } from 'src/app/model/prestataire';
 
 @Component({
   selector: 'app-passerdemande',
@@ -12,7 +13,7 @@ export class PasserdemandeComponent implements OnInit {
   Listdemande ! : demandes[]; 
 demandes ! : demandes;
 title !: String;
-
+prestataire !: prestataire;
   constructor(private demandeservice: DemandeService,
     private route:Router,
    private currentRoute: ActivatedRoute) { }
@@ -20,14 +21,14 @@ title !: String;
 
    id:any;
 ngOnInit(): void {
-let    id= this.currentRoute.snapshot.params[' id'];
+ let    id= this.currentRoute.snapshot.params[' id'];
 console.log(  id);
 if( id==null){
-//add a new demande
-this.demandes= new demandes();
+//  add a new demande
+ this.demandes= new demandes();
 this.title='add a new demande'}
 else{
-//update
+//  update
 this.title='update the demande with id: '+id;
 this.demandeservice.getById(id).subscribe(
 (data)=>this.demandes=data

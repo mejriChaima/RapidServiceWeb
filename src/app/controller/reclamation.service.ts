@@ -11,7 +11,7 @@ import { reclamation } from '../model/reclamation';
 })
 export class ReclamationService {
 
-  reclamationUrl:string='http://localhost:3000/reclamation'
+  reclamationUrl:string='http://localhost:3000/reclamation/fetch'
   httpOptions = {
     headers: new HttpHeaders({
     'Content-Type': 'application/json'
@@ -22,6 +22,10 @@ export class ReclamationService {
   getReclamation():Observable<reclamation[]>{
     return this.http.get<reclamation[]>(this.reclamationUrl);
   }
+  postReclamation(r:reclamation){
+    return this.http.post(this.reclamationUrl,r);
+  }
+ 
   deleteReclamation(nRec:any): Observable<any>{
     return this.http.delete<any>(this.reclamationUrl+'/'+nRec);
     alert("Vous avez supprimer une reclamation");

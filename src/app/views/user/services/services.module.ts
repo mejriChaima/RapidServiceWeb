@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ServicesRoutingModule } from './services-routing.module';
-import { ServicesComponent } from './service/services.component';
 import { BricolageSComponent } from './bricolage-s/bricolage-s.component';
 import { DemenagementSComponent } from './demenagement-s/demenagement-s.component';
 import { JardinageSComponent } from './jardinage-s/jardinage-s.component';
@@ -15,13 +14,17 @@ import { MenageSComponent } from './menage-s/menage-s.component';
 import { ListvilleSComponent } from './listville-s/listville-s.component';
 import { ListprestataireComponent } from './listprestataire/listprestataire.component';
 import { ProfilPComponent } from './profil-p/profil-p.component';
+import { CompCour1Component } from './comp-cour1/comp-cour1.component';
+import { CompCour2Component } from './comp-cour2/comp-cour2.component';
+import { CompCour3Component } from './comp-cour3/comp-cour3.component';
+import { CompCour4Component } from './comp-cour4/comp-cour4.component';
 
 
 
 @NgModule({
   declarations: [
   
-    ServicesComponent,
+
        BricolageSComponent,
        DemenagementSComponent,
        JardinageSComponent,
@@ -33,7 +36,11 @@ import { ProfilPComponent } from './profil-p/profil-p.component';
        MenageSComponent,
        ListvilleSComponent,
        ListprestataireComponent,
-       ProfilPComponent
+       ProfilPComponent,
+       CompCour1Component,
+       CompCour2Component,
+       CompCour3Component,
+       CompCour4Component
   ],
   imports: [
     CommonModule,

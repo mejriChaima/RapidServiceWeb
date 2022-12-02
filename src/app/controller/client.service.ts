@@ -6,7 +6,7 @@ import { client } from '../model/client';
   providedIn: 'root'
 })
 export class ClientService {
-  url:string='http://localhost:3000/client'
+  url:string='http://localhost:3000/clients/fetch'
 
   constructor(private http : HttpClient) { }
 

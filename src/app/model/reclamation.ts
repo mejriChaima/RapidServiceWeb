@@ -10,6 +10,7 @@ export class reclamation{
     datemission!:Date;
     nomPrestataire!:string;
     missionDesc!:string;
+    status!:string;
 
    
 }

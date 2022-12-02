@@ -1,11 +1,8 @@
 export class Avis{
     
-    idAvis ! : number;
-    id_client!: number;
+    id ! : number;
     typeAvis!: string;
-    nomService!: string;
-    typeService!: string;
-    id!:number;
+    prestataireId!:number;
     nbrAvis ! : number;
      
 }

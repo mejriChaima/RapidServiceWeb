@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { DemandeRoutingModule } from './demande-routing.module';
 import { DemandeComponent } from './demande/demande.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,7 +14,6 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     DemandeRoutingModule,
     FormsModule,
-    HttpClientModule
   ]
 })
 export class DemandeModule { }

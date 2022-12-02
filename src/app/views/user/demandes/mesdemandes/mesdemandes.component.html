@@ -7,7 +7,7 @@
   </div>
 
 
-
+ 
  
   <section class="contact_section layout_padding">
 
@@ -17,28 +17,54 @@
             
 
                   <table class="table">
-                <thead>
+                <thead class="table-warning">
                   <tr>
 
                     <th>Email</th>
-                    <th>Password</th>
                     <th>Nom Service</th>
                     <th>Type Service</th>
                     <th>Nom prestataire</th>
-                
+                    <th>Date</th>
+                    <th>Heure</th>
+                    <th>Adresse</th>
+                    <th>Tél</th>
+                    <th>Ville</th>
+                    <th>Autres</th>
+                    <th>Action</th>
+                 
+
+                    
                    </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
-                  <tr *ngFor="let d of Listdemande">
-                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{d.mailC}}</strong></td>
-                    <td>{{d.passwordC}}</td>
-                    <td>{{d.nomService}}</td>
+                  <tr *ngFor="let d of dataArray;index as i">
+                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{d.mail}}</strong></td>
+                   <td>{{d.nomService}}</td>
                     <td>{{d.typeService}}</td>
                     <td>{{d.nomPrestataire}}</td>
-                     <td><button type="button" class="btn btn-danger" (click)="Supprimer(d)">Supprimer</button></td>
-                    <a routerLink="user/demandes/passerdemande">
-                      update
-                     </a>
+                    <td>{{d.date}}</td>
+                    <td>{{d.heure}}</td>
+                    <td>{{d.adresse}}</td>
+                    <td>{{d.tel}}</td>
+                    <td>{{d.ville}}</td>
+                    <td>{{d.detail}}</td>
+                   <!-- <button id="boot-icon" (click)="delete(item._id,i)" class="bi bi-trash" style="font-size: 10rem; color: rgb(255, 0, 0);"></button>
+                  <i class="fa-solid fa-pencil"></i>   -->
+                      <!-- <td><button type="button" class="btn btn-link" (click)="delete(item._id,i)"><span class="bi bi-trash" style="font-size: 10rem; color: rgb(255, 0, 0);"></span></button></td> -->
+                   <!-- <button class="bi bi-pencil-square" style="font-size: 10rem; color: rgb(248, 170, 25);"   routerLink="user/demandes/passerdemande"></button> -->
+                   
+                   <svg xmlns="http://www.w3.org/2000/svg" (click)="Supprimer(d.id)"  style="font-size: 10rem; color: rgb(255, 0, 0);" class="icon icon-tabler icon-tabler-archive" width="40" height="40" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <rect x="3" y="4" width="18" height="4" rx="2"></rect>
+                    <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10"></path>
+                    <line x1="10" y1="12" x2="14" y2="12"></line>
+                 </svg> 
+                 <svg xmlns="http://www.w3.org/2000/svg" (click)="update(d.id)" routerLink="user/demandes/passerdemande" style="font-size: 10rem; color: rgba(10, 204, 52, 0.966);" class="icon icon-tabler icon-tabler-pencil" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4"></path>
+                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5"></line>
+              
+               </svg>
              </tr>
                 </tbody>
                               </table>

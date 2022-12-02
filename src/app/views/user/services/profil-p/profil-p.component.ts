@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AvisService } from 'src/app/controller/avis.service';
 import { Avis } from 'src/app/model/avis';
 
@@ -11,7 +12,8 @@ export class ProfilPComponent implements OnInit {
   listavis ! : Avis[];
   avis ! : Avis;
 
-  constructor( private avisservice : AvisService ) { }
+  constructor( private avisservice : AvisService,
+               private currentRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
 
@@ -26,22 +28,14 @@ export class ProfilPComponent implements OnInit {
   }
  }
 
-
-    save(){
-      this.avisservice.addAvis(this.avis).subscribe(
-      ()=> this.listavis= [this.avis, ...this.listavis]
-      );
-      }
-   
-       deleteProduct(avis:Avis){
-        let i= this.listavis.indexOf(avis);
-        if(i!=-1){
-          //cnx to backend service/api
-          this.avisservice.deleteAvis(avis.id).subscribe(
-            ()=> this.listavis.splice(i,1)
-          )
+ ajouter(){
+  this.avisservice.addAvis(this.avis).subscribe(
+  ()=> this.listavis= [this.avis, ...this.listavis]
+  );
+  }
+      Supprimer(id: any){
+        this.avisservice.deleteAvis(id).subscribe(
+     ()=> {console.log('removed') ;}
     
-        }
-      }
-
-}
+    ) }
+       }

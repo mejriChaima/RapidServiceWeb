@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ClientService } from 'src/app/controller/client.service';
 import { client } from 'src/app/model/client';
 
@@ -11,7 +12,8 @@ export class ListclientComponent implements OnInit {
 clientList ! : client[];
 client !: client;
 
-  constructor(private clientservice : ClientService) { }
+  constructor(private clientservice : ClientService,
+    private ac: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.clientservice.getAllClient().subscribe(

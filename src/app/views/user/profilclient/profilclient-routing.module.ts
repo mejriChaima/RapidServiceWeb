@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProfilclientComponent } from './profilclient/profilclient.component';
 
 const routes: Routes = [
-  {path:'',component:ProfilclientComponent},
-  {path:'/profilclient',component:ProfilclientComponent}
+  {path:'',component:ProfilclientComponent}
+  
 ];
 
 @NgModule({

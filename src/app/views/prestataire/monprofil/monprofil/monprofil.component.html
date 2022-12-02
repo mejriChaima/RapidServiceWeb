@@ -32,6 +32,8 @@
 				<ul class="nav nav-tabs userProfileTabs" role="tablist">
 					<li role="presentation" class=""><a href="#tab-item-1" aria-controls="tab-item-1" role="tab" data-toggle="tab" aria-expanded="false" id="maj">
                         Modifier pofil</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <li role="presentation" class=""><a href="#tab-item-5" aria-controls="tab-item-5" role="tab" data-toggle="tab" aria-expanded="false" id="fichier">Gestion fichier</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 					<li role="presentation" class="active"><a href="#tab-item-2" aria-controls="tab-item-2" role="tab" data-toggle="tab" aria-expanded="true" id="vd">Mes video</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<li role="presentation" class=""><a href="#tab-item-3" aria-controls="tab-item-3" role="tab" data-toggle="tab" aria-expanded="false" id="img">Mes photos</a></li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<li role="presentation" class=""><a href="#tab-item-4" aria-controls="tab-item-4" role="tab" data-toggle="tab" aria-expanded="false" id="amis">Mes amis</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -184,7 +186,69 @@
 							</div>
 						</div>
 					</div>
-
+	<!-- gest fcher -->
+  <div role="tabpanel" class="tab-pane fade" id="tab-item-5">
+    
+    <div class="container-xxl flex-grow-1 container-p-y">
+      <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Table fichiers </span></h4>
+      <div class="card">
+      <h5 class="card-header">List Fichiers</h5>
+      <div class="table-responsive text-nowrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Fichier</th>
+              <th>Publié le</th>
+              <th>Type</th>
+             </tr>
+          </thead>
+          <tbody class="table-border-bottom-0">
+            <tr *ngFor="let f of Listfichier">
+              <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{f.idFichier}}</strong></td>
+              <td></td>
+              <td>{{f.date}}</td>
+              <td>{{f.typefichier}}</td>
+                <td>
+                <div class="dropdown">
+                  <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                    <i class="bx bx-dots-vertical-rounded"></i>
+                  </button>
+                  
+                </div>
+              </td>
+            </tr>
+          
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+    
+      
+      &nbsp;
+      &nbsp;
+      &nbsp;
+    
+      <h5 class=" ">
+        Pour uploder un fichier:
+      </h5>
+    
+    <div class="container">
+    
+    <form method="post" action="reception.php" enctype="multipart/form-data">
+        <label for="mon_fichier">Fichier(video, photo) (tous formats | max. 1 Mo) :</label><br />
+        <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+        <input type="file" name="mon_fichier" id="mon_fichier" /><br />
+        <label for="titre">Titre du fichier (max. 50 caractères) :</label><br />
+        <input type="text" name="titre" value="" id="titre"  placeholder="Titre de fichier" /><br />
+        <label for="description">Description de votre fichier (max. 255 caractères) :</label><br />
+        <textarea name="description" id="description"></textarea><br />
+        <input type="submit"  class="btn btn-primary" name="submit" value="Upload" />
+    </form>
+    </div>
+    
+  </div>
 					
 					<!-- Activities -->
 					<div role="tabpanel" class="tab-pane fade active in" id="tab-item-2">

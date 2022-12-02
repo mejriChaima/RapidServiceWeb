@@ -11,7 +11,7 @@ import { InformatiqueComponent } from './informatique/informatique.component';
 import { MenageComponent } from './menage/menage.component';
 
 const routes: Routes = [
-  {path:'',component:ServicesComponent},
+  {path:'S',component:ServicesComponent},
   {path:'b',component:BricolageComponent},
   {path:'d',component:AmenagementComponent},
   {path:'ad',component:AideadomicileComponent},

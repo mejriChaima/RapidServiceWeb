@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { demandes } from 'src/app/model/demandes';
 import { DemandeService } from 'src/app/controller/demande.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -11,22 +12,31 @@ import { DemandeService } from 'src/app/controller/demande.service';
 export class DemandeComponent implements OnInit {
   demandesList !: demandes []; 
   demandes !:  demandes;
-  constructor(private demandeservice:DemandeService) { }
+  id: any;
+  constructor(private demandeservice:DemandeService,
+        private ac: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    
+       
+    this.id= this.ac.snapshot.params['id'];
+    this.demandeservice.getById(this.id).subscribe(
+      (d)=>{
+        console.log(d);
+        this.demandes=d
+      }
+    )
     this.demandeservice.getAllDemandes().subscribe(
       (data:demandes[]) => this.demandesList = data);
   }
-  Supprimer(demandes:demandes){
-    let j = this.demandesList.indexOf(demandes);
-    if(j!=-1){
-    this.demandesList.splice(j, 1);
-    this.demandeservice.deleteDemande(demandes.id).subscribe(
-      ()=> this.demandesList.splice(j,1))
 
+  
+  Supprimer(id: any){
+    this.demandeservice.deleteDemande(id).subscribe(
+ ()=> {console.log('removed') ;}
 
-  }
-}
+) }
+  
   
 
   Accepter(demandes :demandes) {

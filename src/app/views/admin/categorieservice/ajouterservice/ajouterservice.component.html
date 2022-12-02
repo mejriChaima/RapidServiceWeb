@@ -1,0 +1,53 @@
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="card">
+    <h5 class="card-header">Ajouter service</h5>
+   
+
+        <form  name="form"  #form="ngForm">
+           
+
+          <div class="row">
+            <div class="form-group ">
+              <label>Nom Service:*</label>
+              <input type="text"  [(ngModel)]="service.nomService" name="nomService"
+              required  class="form-control" #E="ngModel">
+            </div>
+            <div class="alert alert-danger col-md-6" *ngIf="E.invalid && E.touched">
+              <div *ngIf="E.hasError('required')">this field is required</div>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group ">
+              <label>Type Service:*</label>
+              <input type="text"  [(ngModel)]="service.typeService" name="typeService"
+              required  class="form-control" #T="ngModel">
+            </div>
+            <div class="alert alert-danger col-md-6" *ngIf="T.invalid && T.touched">
+              <div *ngIf="T.hasError('required')">this field is required</div>
+              </div>
+          </div>
+
+
+
+
+            <!-- <div class="form-group">
+                <label >Nom Service</label>
+                <input type="text" required  name="nom" class="form-control"  placeholder="Ajouter un nom service "
+                ngModel name="nom"
+                #nom="ngModel"/>
+              <div class="alert alert-danger" *ngIf="nom.touched   && nom.invalid"> nom invalid</div>
+              </div> -->
+            
+
+            <!-- <div class="form-group">
+                <label>Type Service</label>
+                <input type="text"  name="type"    required class="form-control" placeholder="Ajouter un type service"
+                ngModel name="type"
+                #type="ngModel"/>
+              <div class="alert alert-danger" *ngIf="type.touched   && type.invalid"> type invalid</div>
+              </div> -->
+ <button class="btn btn-primary" type="submit" (click)="save()" [disabled]="form.invalid" routerLink="/admin/categorieservice">Ajouter</button>
+                    
+          </form>

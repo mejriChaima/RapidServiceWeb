@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path:'',component:MonprofilComponent},
-  {path:'/monprofil',component:MonprofilComponent}
+  {path:'',component:MonprofilComponent}
   
     
 ];

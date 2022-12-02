@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { DemandesRoutingModule } from './demandes-routing.module';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { MesdemandesComponent } from './mesdemandes/mesdemandes.component';
 import { PasserdemandeComponent } from './passerdemande/passerdemande.component';
 
@@ -18,7 +17,7 @@ import { PasserdemandeComponent } from './passerdemande/passerdemande.component'
     CommonModule,
     DemandesRoutingModule,
     FormsModule,
-    HttpClientModule
+   
     
   ]
 })

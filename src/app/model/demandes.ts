@@ -9,10 +9,15 @@ export class demandes{
     nomService!: string;
     typeService!: string;
     nomPrestataire!:string;
-    mailC!:string;
-    passwordC !: string;
+    mail!:string;
     status!:string;
     Action !: string;
+    date !: Date;
+    tel !: number;
+    detail! : number;
+    heure! : number;
+    adresse! : number;
+    ville ! : number;
 
    
 }
